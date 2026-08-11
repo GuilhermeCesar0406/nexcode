@@ -8,7 +8,7 @@ function Navbar() {
         </div>
 
         <span className="text-lg font-semibold text-gray-900">
-          NexCode
+          NexContol
         </span>
       </div>
 
