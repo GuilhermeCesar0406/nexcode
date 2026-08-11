@@ -1,6 +1,14 @@
 function Dashboard() {
   return (
-    <h1>Dashboard</h1>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold text-purple-600">
+        Dashboard
+      </h1>
+
+      <p className="mt-2 text-gray-600">
+        Tailwind está funcionando!
+      </p>
+    </div>
   );
 }
 
