@@ -1,5 +1,6 @@
 import StatCard from "../../components/StatCard/StatCard";
 import { getDashboardStats } from "../../services/dashboardService";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 function Dashboard() {
   const stats = getDashboardStats();
@@ -19,7 +20,7 @@ function Dashboard() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
           title="Vendas hoje"
-          value={`R$ ${stats.salesToday.toFixed(2).replace(".", ",")}`}
+          value={formatCurrency(stats.salesToday)}
         />
 
         <StatCard
@@ -34,7 +35,7 @@ function Dashboard() {
 
         <StatCard
           title="Vendas no mês"
-          value={`R$ ${stats.salesMonth.toFixed(2).replace(".", ",")}`}
+          value={formatCurrency(stats.salesMonth)}
         />
       </div>
     </div>
